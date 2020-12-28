@@ -1,6 +1,16 @@
-# Repositorio DeepSpeech para español chileno
+# Modelo DeepSpeech para español chileno
 
 El objetivo de este proyecto es hacer un modelo de transcripción de voz a texto (STT por sus siglas en ingles), especializado en español chileno. Dentro de este repositorio se encuentra una descripción del trabajo realizado hasta ahora y queda abierto a otras personas para que continúen desarrollando.
+
+## Sobre el proyecto
+
+Este proyecto nace por un desafío propuesto por la empresa Entel, en el programa Sin Límites del Centro de Innovacion UC. El desafío era el siguiente
+
+> Proponer un algoritmo open source que transcriba de voz a texto (Speech To Text).
+
+Uno de los puntos mas relevantes de este proyecto era que fuera Open Source, por dos principales razones. La primera es que el modelo queda disponible para cualquier entidad que deseé realizar transcripciones. La segunda razón es que al ser abierto y público para todo el mundo, tiene la ventaja de que se puede seguir mejorando el modelo por cualquier entidad interesada, mejorando la calidad de las transcripciones.
+
+En el equipo de trabajo éramos dos estudiantes, Rodrigo Troncoso y Diego Aguayo, y nuestro mentor, Eduardo Durán, que guió nuestro trabajo durante el desarrollo del desafío.
 
 ## DeepSpeech
 
@@ -40,6 +50,7 @@ Para continuar el entrenamiento, combinamos dos bases de datos de español chile
 [Acceso](https://commonvoice.mozilla.org/es/datasets). La base de datos originalmente contiene ~521horas de audio, pero luego de filtrar para hablantes chilenos(~2%) y audios validados, quedan ~4horas útiles para entrenamiento.
 
 Para información de como se pre-procesó y juntó estas bases de datos, leer el **README** de [preprocesamiento](https://github.com/diegoaguayo/es_cl_deepspeech/tree/master/preprocesamiento).
+
 ## Entrenamiento
 Para el entrenamiento se utilizaron las bases de datos mencionadas anteriormente. El script utilizado para el entrenamiento es [train.sh](). Información sobre los hiper-parámetros utilizados se puede encontrar [acá](https://deepspeech.readthedocs.io/en/latest/Flags.html#training-flags).
 
@@ -49,11 +60,27 @@ Posterior al entrenamiento, el modelo obtuvo un WER de 0.122763, sobre nuestro s
 
 Primero, el WER del modelo original es menor de lo esperado (0.165126), probablemente porque la calidad del dataset era buena y sin ruido ambiente.
 
-Segundo, el modelo no mejoró mucho respecto al modelo original. Esto no es muy sorprendente, ya que la base de datos con la que se contaba es pequeña. Se necesita un orden de cientas de horas para obtener un buen modelo.
+Segundo, el modelo no mejoró mucho respecto al modelo original. Esto no es sorprendente, ya que la base de datos con la que se contaba es pequeña. Se necesita un orden de cientas de horas para obtener un buen modelo.
 
 
 ### Desafíos
 
-Conseguir bases de datos mas grandes ... ...
+Como se mencionó en el punto anterior, las bases de datos con las que se entrenó eran pequeñas, por lo tanto el modelo no mejoró mucho con respecto al checkpoint sobre el cual se continuó el entrenamiento. Es por esto, que unos el mayor desafío para continuar con este proyecto es conseguir bases de datos de una mayor magnitud para poder especializar el modelo al dialecto chileno.
 
-## Sobre el proyecto
+## Utilizacion del modelo para inferencias (Transcripciones)
+Cuando se transcribe de audio a texto, se habla de inferencia. Debido a que el modelo hace una inferencia sobre el audio que fue entregado para realizar la transcripcion.
+
+Antes de comenzar, mencionamos que es una buena práctica crear un *_virtual enviroment_* para hacer esto, ya que se evitan problemas con las dependencias de la libreria. Esta es la [documentacion oficial](https://deepspeech.readthedocs.io/en/latest/USING.html) para hacer inferencias.
+
+Pata hacer inferencias con el modelo desarrollado, es necesario instalar la libreria `deepspeech`. 
+```sh
+$ pip3 install deepspeech
+```
+Luego es necesario tener descargados el modelo y el scorer, disponibles en este [link](linkaldrive).
+Ahora se pueden realizar transcripciones de audio usando el siguiente comando.
+
+```sh
+$ deepspeech --model path/to/model.pbmm --scorer path/to/scorer.scorer --audio path/to/my_audio_file.wav
+```
+Donde es importante indicar el path hacia el modelo, scorer y audio que se quiera transcribir.
+Los requisitos es que el audio debe estar en formato `.wav`, tener un *_sample_* rate de 16bits, y ser de un solo canal (mono).
