@@ -10,7 +10,7 @@ Este proyecto nace por un desafío propuesto por la empresa Entel, en el program
 
 Uno de los puntos mas relevantes de este proyecto era que fuera Open Source, por dos principales razones. La primera es que el modelo queda disponible para cualquier entidad que deseé realizar transcripciones. La segunda razón es que al ser abierto y público para todo el mundo, tiene la ventaja de que se puede seguir mejorando el modelo por cualquier entidad interesada, mejorando la calidad de las transcripciones.
 
-En el equipo de trabajo éramos dos estudiantes, Rodrigo Troncoso y Diego Aguayo, y nuestro mentor, Eduardo Durán, que guió nuestro trabajo durante el desarrollo del desafío.
+En el equipo de trabajo éramos dos estudiantes, Rodrigo Troncoso [(rftroncoso@uc.cl)], Diego Aguayo [(dtaguayo@uc.cl)], y nuestro mentor, Eduardo Durán, que guió nuestro trabajo durante el desarrollo del desafío.
 
 ## DeepSpeech
 
@@ -68,11 +68,11 @@ Segundo, el modelo no mejoró mucho respecto al modelo original. Esto no es sorp
 Como se mencionó en el punto anterior, las bases de datos con las que se entrenó eran pequeñas, por lo tanto el modelo no mejoró mucho con respecto al checkpoint sobre el cual se continuó el entrenamiento. Es por esto, que unos el mayor desafío para continuar con este proyecto es conseguir bases de datos de una mayor magnitud para poder especializar el modelo al dialecto chileno.
 
 ## Utilizacion del modelo para inferencias (Transcripciones)
-Cuando se transcribe de audio a texto, se habla de inferencia. Debido a que el modelo hace una inferencia sobre el audio que fue entregado para realizar la transcripcion.
+Cuando se transcribe de audio a texto, se habla de inferencia. Debido a que el modelo hace una inferencia sobre el audio que fue entregado para realizar la transcripción.
 
-Antes de comenzar, mencionamos que es una buena práctica crear un *_virtual enviroment_* para hacer esto, ya que se evitan problemas con las dependencias de la libreria. Esta es la [documentacion oficial](https://deepspeech.readthedocs.io/en/latest/USING.html) para hacer inferencias.
+Antes de comenzar, mencionamos que es una buena práctica crear un *_virtual enviroment_* para hacer esto, ya que se evitan problemas con las dependencias de la librería. Esta es la [documentación oficial](https://deepspeech.readthedocs.io/en/latest/USING.html) para hacer inferencias.
 
-Pata hacer inferencias con el modelo desarrollado, es necesario instalar la libreria `deepspeech`. 
+Pata hacer inferencias con el modelo desarrollado, es necesario instalar la librería `deepspeech`. 
 ```sh
 $ pip3 install deepspeech
 ```
