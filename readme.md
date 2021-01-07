@@ -67,7 +67,7 @@ Segundo, el modelo no mejoró mucho respecto al modelo original. Esto no es sorp
 
 Como se mencionó en el punto anterior, las bases de datos con las que se entrenó eran pequeñas, por lo tanto el modelo no mejoró mucho con respecto al checkpoint sobre el cual se continuó el entrenamiento. Es por esto, el mayor desafío para continuar con este proyecto es conseguir bases de datos de una mayor tamaño para poder especializar el modelo al dialecto chileno.
 
-Adicionalmente, existen bases de datos de español chileno que serían buenas para entrenar, pero no se encuentran disponibles públicamente aún. Estan son [COSCACH](http://sadowsky.cl/coscach-es.html) y [SpeechOcean](http://en.speechocean.com/search.html?search=chile)
+Adicionalmente, existen bases de datos de español chileno que serían buenas para entrenar, pero no se encuentran disponibles públicamente aún. Por ejemplo los datasets con los que cuenta [SpeechOcean](http://en.speechocean.com/search.html?search=chile)
 
 ## Utilizacion del modelo para inferencias (Transcripciones)
 Cuando se transcribe de audio a texto, se habla de inferencia. Debido a que el modelo hace una inferencia sobre el audio que fue entregado para realizar la transcripción.
