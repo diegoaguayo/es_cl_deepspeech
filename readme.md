@@ -10,7 +10,7 @@ Este proyecto nace por un desafío propuesto por la empresa Entel, en el program
 
 Uno de los puntos mas relevantes de este proyecto era que fuera Open Source, por dos principales razones. La primera es que el modelo queda disponible para cualquier entidad que deseé realizar transcripciones. La segunda razón es que al ser abierto y público para todo el mundo, tiene la ventaja de que se puede seguir mejorando el modelo por cualquier entidad interesada, mejorando la calidad de las transcripciones.
 
-En el equipo de trabajo éramos dos estudiantes, Rodrigo Troncoso (rftroncoso@uc.cl), Diego Aguayo (dtaguayo@uc.cl), y nuestro mentor, Eduardo Durán, que guió nuestro trabajo durante el desarrollo del desafío.
+En el equipo de trabajo éramos dos compañeros, Rodrigo Troncoso (rftroncoso@uc.cl), Diego Aguayo (dtaguayo@uc.cl), y nuestro mentor, Eduardo Durán (e.duran@uc.cl, eduran@entel.cl), que guió nuestro trabajo durante el desarrollo del desafío.
 
 ## DeepSpeech
 
