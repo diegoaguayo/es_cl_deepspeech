@@ -78,7 +78,7 @@ Pata hacer inferencias con el modelo desarrollado, es necesario instalar la libr
 ```sh
 $ pip3 install deepspeech
 ```
-Luego es necesario tener descargados el modelo y el scorer, disponibles en este [link](https://drive.google.com/drive/folders/16MNLQ_YTVKS_UvUAKQlH9zCcPzPvDVO3?usp=sharing).
+Luego es necesario tener descargados el modelo y el scorer, disponibles en este [link](https://drive.google.com/drive/folders/1qSXi7vri8UI1P0wMBlbMCnsE1onHnEJH?usp=sharing).
 Ahora se pueden realizar transcripciones de audio usando el siguiente comando.
 
 ```sh
